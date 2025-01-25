@@ -2,9 +2,12 @@ app:
     menu:
         games:
             section: Games
-            constructor: Constructor
+            constructor: Constructors
+            console: Consoles
     ui:
         constructors: Constructors
         constructor: Constructor
+        consoles: Consoles
+        console: Console
         name: Name
         logo: Logo
