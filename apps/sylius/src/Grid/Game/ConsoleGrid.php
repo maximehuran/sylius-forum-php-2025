@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace App\Grid\Game;
 
 use App\Entity\Game\Console;
+use App\Entity\Game\Constructor;
 use Sylius\Bundle\GridBundle\Builder\Action\CreateAction;
 use Sylius\Bundle\GridBundle\Builder\Action\DeleteAction;
 use Sylius\Bundle\GridBundle\Builder\Action\UpdateAction;
@@ -22,6 +23,7 @@ use Sylius\Bundle\GridBundle\Builder\ActionGroup\ItemActionGroup;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\MainActionGroup;
 use Sylius\Bundle\GridBundle\Builder\Field\DateTimeField;
 use Sylius\Bundle\GridBundle\Builder\Field\StringField;
+use Sylius\Bundle\GridBundle\Builder\Filter\EntityFilter;
 use Sylius\Bundle\GridBundle\Builder\Filter\StringFilter;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
@@ -79,7 +81,8 @@ class ConsoleGrid extends AbstractGrid implements ResourceAwareGridInterface
                     ->setLabel('app.ui.name')
             )
             ->addFilter(
-                StringFilter::create('constructor', ['constructor.name'])
+                // EntityFilter::create('constructor', '%app.model.constructor.class%')
+                EntityFilter::create('constructor', Constructor::class)
                     ->setLabel('app.ui.constructor')
             )
         ;

@@ -118,4 +118,9 @@ class Constructor implements ConstructorInterface
             }
         }
     }
+
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
 }

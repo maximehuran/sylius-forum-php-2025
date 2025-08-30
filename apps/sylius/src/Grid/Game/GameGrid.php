@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Grid\Game;
 
+use App\Entity\Game\Console;
 use App\Entity\Game\Game;
 use Sylius\Bundle\GridBundle\Builder\Action\CreateAction;
 use Sylius\Bundle\GridBundle\Builder\Action\DeleteAction;
@@ -22,6 +23,7 @@ use Sylius\Bundle\GridBundle\Builder\ActionGroup\ItemActionGroup;
 use Sylius\Bundle\GridBundle\Builder\ActionGroup\MainActionGroup;
 use Sylius\Bundle\GridBundle\Builder\Field\DateTimeField;
 use Sylius\Bundle\GridBundle\Builder\Field\StringField;
+use Sylius\Bundle\GridBundle\Builder\Filter\EntityFilter;
 use Sylius\Bundle\GridBundle\Builder\Filter\StringFilter;
 use Sylius\Bundle\GridBundle\Builder\GridBuilderInterface;
 use Sylius\Bundle\GridBundle\Grid\AbstractGrid;
@@ -76,6 +78,11 @@ class GameGrid extends AbstractGrid implements ResourceAwareGridInterface
                         'fields' => ['translation.name'], // Search on translation field
                     ])
             )
+            // ->addFilter(
+            //     // EntityFilter::create('consoles', '%app.model.console.class%')
+            //     EntityFilter::create('consoles', Console::class, true)
+            //         ->setLabel('app.ui.consoles')
+            // )
         ;
     }
 

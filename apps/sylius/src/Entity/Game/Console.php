@@ -106,4 +106,9 @@ class Console implements ConsoleInterface
     {
         $this->constructor = $constructor;
     }
+
+    public function __toString()
+    {
+        return (string) $this->name;
+    }
 }
