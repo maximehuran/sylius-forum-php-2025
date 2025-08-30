@@ -70,7 +70,7 @@ symfony.server.log: ## Tail the logs
 	@$(call symfony,local:server:log)
 
 symfony.migration.generate: ## Generate migration file
-	$(call symfony.console, doctrine:migrations:diff --namespace="App\Migrations")
+	$(call symfony.console, doctrine:migrations:diff --namespace="DoctrineMigrations")
 
 symfony.migration.execute: ## Execute migration file
 	$(call symfony.console, doctrine:migrations:execute ${ARGS})
