@@ -4,10 +4,14 @@ app:
             section: Games
             constructor: Constructors
             console: Consoles
+            game: Games
     ui:
         constructors: Constructors
         constructor: Constructor
         consoles: Consoles
         console: Console
+        games: Games
+        game: Game
         name: Name
         logo: Logo
+        cover: Cover

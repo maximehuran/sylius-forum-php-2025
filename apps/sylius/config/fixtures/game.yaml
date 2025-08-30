@@ -1,0 +1,14 @@
+sylius_fixtures:
+    suites:
+        default:
+            fixtures:
+                app_game:
+                    options:
+                        random: 100
+                        custom:
+                           - consoles: 
+                                - 'NES'
+                                - 'Super NES'
+                             translations:
+                                 en_US: 
+                                     name: 'Super Mario Bros.'

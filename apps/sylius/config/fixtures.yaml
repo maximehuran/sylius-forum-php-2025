@@ -1,3 +1,4 @@
 imports:
     - { resource: 'fixtures/constructor.yaml' }
     - { resource: 'fixtures/console.yaml' } # Important to be after constructor
+    - { resource: 'fixtures/game.yaml' } # Important to be after console

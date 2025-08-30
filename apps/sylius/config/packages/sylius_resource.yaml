@@ -10,6 +10,10 @@ sylius_resource:
 
     # Configure your resources
     resources:
-        #app.book:
-            #classes:
-                #model: App\Entity\Book
+        app.game:
+            classes:
+                model: App\Entity\Game\Game
+            # No way to define it in PHP Attribute for now
+            translation:
+                classes:
+                    model: App\Entity\Game\GameTranslation
