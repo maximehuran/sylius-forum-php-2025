@@ -1,0 +1,4 @@
+{% set game = hookable_metadata.context.game|default(null) %}
+{% set metaTitle = game.name ~ ' - ' ~ 'app.ui.games'|trans ~ ' ' ~ sylius.channel.name|default('') %}
+
+<meta property="og:title" content="{{ metaTitle }}"/>

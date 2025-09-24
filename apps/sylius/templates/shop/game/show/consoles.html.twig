@@ -1,0 +1,16 @@
+{% set game = hookable_metadata.context.game|default(null) %}
+
+{% set consoles = game.consoles|default([]) %}
+{% if consoles|length %}
+    <div class="mb-4">
+        <div class="card-footer bg-white">
+            <div class="d-flex gap-1 flex-wrap">
+            {% for console in consoles %}
+                <span class="badge rounded-pill bg-primary text-light" style="font-size: 0.95em; text-decoration:none;">
+                    {{ console.name }}
+                </span>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endif %}

@@ -1,0 +1,20 @@
+sylius_twig_hooks:
+    hooks:
+        # Game show
+        'app.game.show#metatags':
+            game_metatags:
+                template: 'shop/game/show/metatags.html.twig'
+                priority: 0
+        'app.game.show':
+            breadcrumbs:
+                template: 'shop/game/show/breadcrumbs.html.twig'
+                priority: 300
+            title:
+                template: 'shop/game/show/title.html.twig'
+                priority: 200
+            consoles:
+                template: 'shop/game/show/consoles.html.twig'
+                priority: 100
+            content:
+                template: 'shop/game/show/content.html.twig'
+                priority: 0

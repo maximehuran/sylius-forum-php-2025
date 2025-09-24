@@ -1,0 +1,14 @@
+{% set game = hookable_metadata.context.game|default(null) %}
+
+{% if game is not empty %}
+    {% if game.cover %}
+        {% set path = game.cover|imagine_filter('app_game_image') %}
+    {% else %}
+        {% set path = '' %}
+    {% endif %}
+    <div>
+        {% if path is not empty %}
+            <img src="{{ path }}" alt="{{ game.name }}" class="{{ class|default('')|escape('html_attr') }}">
+        {% endif %}
+    </div>
+{% endif %}

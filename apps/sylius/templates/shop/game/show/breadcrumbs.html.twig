@@ -1,0 +1,13 @@
+{% from '@SyliusShop/shared/breadcrumbs.html.twig' import breadcrumbs as breadcrumbs %}
+
+{% set game = hookable_metadata.context.game|default(null) %}
+
+{% set crumbs = [
+    {'label': 'sylius.ui.home'|trans, 'path': path('sylius_shop_homepage')},
+    {'label': 'app.ui.games'|trans, 'path': path('app_game_index')},
+    {'label': game.name, 'active': true}
+] %}
+
+<div class="col-12">
+    {{ breadcrumbs(crumbs) }}
+</div>

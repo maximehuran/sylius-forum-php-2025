@@ -1,0 +1,18 @@
+{% extends '@SyliusShop/shared/layout/base.html.twig' %}
+
+{% set game = resource %}
+
+{# Set prefixes for Sylius hooks #}
+{% set prefixes = ['app.game.show'] %}
+
+{% block title %}
+{% apply spaceless %}
+  {{ game.name }} - {{ 'app.ui.games'|trans }} {{ parent() }}
+{% endapply %}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-4 mb-5">
+        {% hook prefixes with { game } %}
+    </div>
+{% endblock %}
