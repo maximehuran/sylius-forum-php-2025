@@ -15,21 +15,24 @@ namespace App\Entity\Game;
 
 use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Sylius\Component\Resource\Model\TranslatableInterface;
 use Sylius\Resource\Model\TimestampableInterface;
 
-interface ConstructorInterface extends ResourceInterface, TimestampableInterface
+interface GameInterface extends ResourceInterface, TranslatableInterface, TimestampableInterface
 {
     public function getName(): ?string;
 
     public function setName(?string $name): void;
 
-    public function getLogo(): ?string;
+    public function getCover(): ?string;
 
-    public function setLogo(?string $logo): void;
+    public function setCover(?string $cover): void;
 
     public function getConsoles(): Collection;
 
-    public function addConsole(Console $console): void;
+    public function hasConsole(ConsoleInterface $console): bool;
 
-    public function removeConsole(Console $console): void;
+    public function addConsole(ConsoleInterface $console): void;
+
+    public function removeConsole(ConsoleInterface $console): void;
 }

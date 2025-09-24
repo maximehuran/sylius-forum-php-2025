@@ -13,11 +13,10 @@ declare(strict_types=1);
 
 namespace App\Entity\Game;
 
-use App\Form\Type\Game\ConstructorType;
-use App\Grid\Game\ConstructorGrid;
-use App\Repository\Game\ConstructorRepository;
+use App\Form\Type\Game\ConsoleType;
+use App\Grid\Game\ConsoleGrid;
+use App\Repository\Game\ConsoleRepository;
 use DateTimeInterface;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Sylius\Component\Resource\Model\TimestampableTrait;
@@ -25,21 +24,21 @@ use Sylius\Resource\Annotation\SyliusCrudRoutes;
 use Sylius\Resource\Metadata\AsResource;
 use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: ConstructorRepository::class)]
-#[ORM\Table(name: 'app_constructor')]
+#[ORM\Entity(repositoryClass: ConsoleRepository::class)]
+#[ORM\Table(name: 'app_console')]
 #[AsResource]
 #[SyliusCrudRoutes(
-    alias: 'app.constructor',
+    alias: 'app.console',
     except: ['show'],
-    form: ConstructorType::class,
-    grid: ConstructorGrid::class,
-    path: '/%sylius_admin.path_name%/constructors',
+    form: ConsoleType::class,
+    grid: ConsoleGrid::class,
+    path: '/%sylius_admin.path_name%/consoles',
     permission: true,
     redirect: 'update',
     section: 'admin',
     templates: '@SyliusAdmin/shared/crud',
 )]
-class Constructor implements ConstructorInterface
+class Console implements ConsoleInterface
 {
     use TimestampableTrait;
 
@@ -55,6 +54,10 @@ class Constructor implements ConstructorInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $logo = null;
 
+    #[ORM\ManyToOne(targetEntity: Constructor::class, inversedBy: 'consoles')]
+    #[ORM\JoinColumn(name: 'constructor_id', referencedColumnName: 'id', nullable: true)]
+    private ?ConstructorInterface $constructor = null;
+
     /**
      * @var ?DateTimeInterface
      */
@@ -68,9 +71,6 @@ class Constructor implements ConstructorInterface
     #[ORM\Column(name: 'updated_at', type: 'datetime')]
     #[Gedmo\Timestampable(on: 'update')]
     protected $updatedAt;
-
-    #[ORM\OneToMany(mappedBy: 'constructor', targetEntity: Console::class)]
-    private Collection $consoles;
 
     public function getId(): ?int
     {
@@ -97,26 +97,14 @@ class Constructor implements ConstructorInterface
         $this->logo = $logo;
     }
 
-    public function getConsoles(): Collection
+    public function getConstructor(): ?ConstructorInterface
     {
-        return $this->consoles;
+        return $this->constructor;
     }
 
-    public function addConsole(Console $console): void
+    public function setConstructor(?ConstructorInterface $constructor): void
     {
-        if (!$this->consoles->contains($console)) {
-            $this->consoles[] = $console;
-            $console->setConstructor($this);
-        }
-    }
-
-    public function removeConsole(Console $console): void
-    {
-        if ($this->consoles->removeElement($console)) {
-            if ($console->getConstructor() === $this) {
-                $console->setConstructor(null);
-            }
-        }
+        $this->constructor = $constructor;
     }
 
     public function __toString()

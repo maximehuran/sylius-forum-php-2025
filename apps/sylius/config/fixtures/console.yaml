@@ -1,0 +1,43 @@
+sylius_fixtures:
+    suites:
+        default:
+            fixtures:
+                app_console:
+                    options:
+                        random: 10
+                        custom:
+                           - name: 'NES'
+                             constructor: 'Nintendo'
+                           - name: 'Super NES'
+                             constructor: 'Nintendo'
+                           - name: 'Nintendo 64'
+                             constructor: 'Nintendo'
+                           - name: 'Game Cube'
+                             constructor: 'Nintendo'
+                           - name: 'Wii'
+                             constructor: 'Nintendo'
+                           - name: 'Wii U'
+                             constructor: 'Nintendo'
+                           - name: 'Nintendo Switch'
+                             constructor: 'Nintendo'
+                           - name: 'Nintendo Switch 2'
+                             constructor: 'Nintendo'
+                           - name: 'Playstation'
+                             constructor: 'Sony'
+                           - name: 'Playstation 2'
+                             constructor: 'Sony'
+                           - name: 'Playstation 3'
+                             constructor: 'Sony'
+                           - name: 'Playstation 4'
+                             constructor: 'Sony'
+                           - name: 'Playstation 5'
+                             constructor: 'Sony'
+                           - name: 'Xbox'
+                             constructor: 'Microsoft'
+                           - name: 'Xbox 360'
+                             constructor: 'Microsoft'
+                           - name: 'Xbox One'
+                             constructor: 'Microsoft'
+                           - name: 'Xbox Series X|S'
+                             constructor: 'Microsoft'
+                        

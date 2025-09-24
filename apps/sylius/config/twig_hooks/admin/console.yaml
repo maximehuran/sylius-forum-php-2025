@@ -1,0 +1,8 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_admin.console.update.content.header:
+            breadcrumbs:
+                template: '@SyliusAdmin/shared/crud/show/content/header/breadcrumbs.html.twig'
+                configuration:
+                    rendered_field: name
+                priority: 0

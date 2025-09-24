@@ -41,6 +41,16 @@ final class AdminMenuListener
             ->setLabel('app.menu.games.constructor')
         ;
 
+        $gameSection
+            ->addChild('app_console', ['route' => 'app_admin_console_index'])
+            ->setLabel('app.menu.games.console')
+        ;
+
+        $gameSection
+            ->addChild('app_game', ['route' => 'app_admin_game_index'])
+            ->setLabel('app.menu.games.game')
+        ;
+
         $this->reorderChildren($menu);
     }
 
