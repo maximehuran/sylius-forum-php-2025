@@ -1,0 +1,8 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_shop.base.header.navbar:
+            game_menu:
+                template: 'shop/layout/menu.html.twig'
+                priority: 100
+            menu:
+                enabled: false

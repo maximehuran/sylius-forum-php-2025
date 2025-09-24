@@ -1,0 +1,17 @@
+<div class="w-100 border-bottom">
+        <nav class="navbar offcanvas-lg offcanvas-start offcanvas-wide p-0" id="navbarNav" role="navigation" aria-label="{{ 'app.ui.menu'|trans }}">
+            <div class="offcanvas-header w-full">
+                <h1 class="offcanvas-title fs-5">
+                    {{ 'app.ui.menu'|trans }}
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#navbarNav" aria-label="{{ 'sylius.ui.close'|trans }}"></button>
+            </div>
+            <div class="offcanvas-body justify-content-lg-center w-full py-0">
+                <div class="navbar-nav my-2 flex-column flex-lg-row gap-lg-4" {{ sylius_test_html_attribute('menu') }}>
+                    <a class="nav-link d-flex align-items-center gap-1" href="{{ path('app_game_index') }}">
+                        {{ 'app.ui.games'|trans }}
+                    </a>
+                </div>
+            </div>
+        </nav>
+</div>
