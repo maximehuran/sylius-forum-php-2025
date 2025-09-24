@@ -1,0 +1,57 @@
+sylius_twig_hooks:
+    hooks:
+        sylius_admin.constructor.update.content.header:
+            breadcrumbs:
+                template: '@SyliusAdmin/shared/crud/show/content/header/breadcrumbs.html.twig'
+                configuration:
+                    rendered_field: name
+                priority: 0
+
+        # Create game
+        'sylius_admin.game.create.content.form.sections':
+            translations:
+                template: 'admin/game/form/sections/translations.html.twig'
+                priority: 100
+            general:
+                template: 'admin/game/form/sections/general.html.twig'
+                priority: 0
+
+        'sylius_admin.game.create.content.form.sections.general':
+            default:
+                enabled: false
+            cover:
+                template: 'admin/game/form/sections/general/cover.html.twig'
+                priority: 100
+            consoles:
+                template: 'admin/game/form/sections/general/consoles.html.twig'
+                priority: 0
+
+        'sylius_admin.game.create.content.form.sections.translations':
+            name:
+                template: 'admin/game/form/sections/translations/name.html.twig'
+                priority: 100
+
+        # Update game
+        'sylius_admin.game.update.content.form.sections':
+            translations:
+                template: 'admin/game/form/sections/translations.html.twig'
+                priority: 100
+            general:
+                template: 'admin/game/form/sections/general.html.twig'
+                priority: 0
+
+
+        'sylius_admin.game.update.content.form.sections.general':
+            default:
+                enabled: false
+            cover:
+                template: 'admin/game/form/sections/general/cover.html.twig'
+                priority: 100
+            consoles:
+                template: 'admin/game/form/sections/general/consoles.html.twig'
+                priority: 0
+
+        'sylius_admin.game.update.content.form.sections.translations':
+            name:
+                template: 'admin/game/form/sections/translations/name.html.twig'
+                priority: 100
