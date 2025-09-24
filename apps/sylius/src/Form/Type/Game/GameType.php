@@ -20,7 +20,6 @@ use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 
 class GameType extends AbstractResourceType
@@ -40,10 +39,6 @@ class GameType extends AbstractResourceType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('name', TextType::class, [
-                'label' => 'app.ui.name',
-                'required' => true,
-            ])
             ->add('cover', ImageType::class, [
                 'label' => 'app.ui.cover',
                 'required' => false,

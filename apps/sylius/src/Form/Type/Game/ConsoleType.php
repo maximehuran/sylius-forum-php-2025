@@ -43,10 +43,6 @@ class ConsoleType extends AbstractResourceType
                 'label' => 'app.ui.name',
                 'required' => true,
             ])
-            ->add('logo', ImageType::class, [
-                'label' => 'app.ui.logo',
-                'required' => false,
-            ])
             ->add('constructor', EntityType::class, [
                 'class' => Constructor::class,
                 'label' => 'app.ui.constructor',
@@ -58,6 +54,10 @@ class ConsoleType extends AbstractResourceType
                         ->orderBy('o.name', 'ASC')
                     ;
                 },
+            ])
+            ->add('logo', ImageType::class, [
+                'label' => 'app.ui.logo',
+                'required' => false,
             ])
         ;
     }
