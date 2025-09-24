@@ -1,0 +1,5 @@
+{% set consoles = data %}
+
+{% for console in consoles %}
+    <div><a href="{{ path('app_admin_console_update', {'id': console.id}) }}">{{ console.name }}</a></div>
+{% endfor %}

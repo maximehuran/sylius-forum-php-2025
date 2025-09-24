@@ -81,7 +81,6 @@ class ConsoleGrid extends AbstractGrid implements ResourceAwareGridInterface
                     ->setLabel('app.ui.name')
             )
             ->addFilter(
-                // EntityFilter::create('constructor', '%app.model.constructor.class%')
                 EntityFilter::create('constructor', Constructor::class)
                     ->setLabel('app.ui.constructor')
             )
