@@ -1,8 +1,6 @@
+<h1 align="center">Forum PHP 2025 - Développez sous Sylius 2 en 40 minutes top chrono</h1>
+
 <p align="center">
-    <a href="https://www.maximehuran.fr/"><img src="images/mh-logo.png" width="300"></a>
+    <img src="images/forum-php-2025.png" width="500">
 </p>
 
-<h1 align="center">Sylius 2 Tutorials</h1>
-
-This repository contains tutorials for the Sylius 2 e-commerce platform. 
-You can combine this repository with the [Sylius 2 Training](https://www.maximehuran.fr/fr/formation-sylius-2)
