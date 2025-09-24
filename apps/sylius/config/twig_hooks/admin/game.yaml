@@ -16,20 +16,20 @@ sylius_twig_hooks:
                 template: 'admin/game/form/sections/general.html.twig'
                 priority: 0
 
-        'sylius_admin.game.create.content.form.sections.general':
-            default:
-                enabled: false
-            cover:
-                template: 'admin/game/form/sections/general/cover.html.twig'
-                priority: 100
-            consoles:
-                template: 'admin/game/form/sections/general/consoles.html.twig'
-                priority: 0
-
         'sylius_admin.game.create.content.form.sections.translations':
             name:
                 template: 'admin/game/form/sections/translations/name.html.twig'
                 priority: 100
+
+        'sylius_admin.game.create.content.form.sections.general':
+            default:
+                enabled: false
+            consoles:
+                template: 'admin/game/form/sections/general/consoles.html.twig'
+                priority: 100
+            cover:
+                template: 'admin/game/form/sections/general/cover.html.twig'
+                priority: 0
 
         # Update game
         'sylius_admin.game.update.content.form.sections':
@@ -40,18 +40,17 @@ sylius_twig_hooks:
                 template: 'admin/game/form/sections/general.html.twig'
                 priority: 0
 
-
-        'sylius_admin.game.update.content.form.sections.general':
-            default:
-                enabled: false
-            cover:
-                template: 'admin/game/form/sections/general/cover.html.twig'
-                priority: 100
-            consoles:
-                template: 'admin/game/form/sections/general/consoles.html.twig'
-                priority: 0
-
         'sylius_admin.game.update.content.form.sections.translations':
             name:
                 template: 'admin/game/form/sections/translations/name.html.twig'
                 priority: 100
+
+        'sylius_admin.game.update.content.form.sections.general':
+            default:
+                enabled: false
+            consoles:
+                template: 'admin/game/form/sections/general/consoles.html.twig'
+                priority: 100
+            cover:
+                template: 'admin/game/form/sections/general/cover.html.twig'
+                priority: 0
