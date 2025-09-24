@@ -1,0 +1,17 @@
+app:
+    menu:
+        games:
+            section: Jeux
+            constructor: Constructeurs
+            console: Consoles
+            game: Jeux
+    ui:
+        constructors: Constructeurs
+        constructor: Constructeur
+        consoles: Consoles
+        console: Console
+        games: Jeux
+        game: Jeu
+        name: Nom
+        logo: Logo
+        cover: Couverture
