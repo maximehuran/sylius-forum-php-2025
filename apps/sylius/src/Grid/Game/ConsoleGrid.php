@@ -39,6 +39,7 @@ class ConsoleGrid extends AbstractGrid implements ResourceAwareGridInterface
     public function buildGrid(GridBuilderInterface $gridBuilder): void
     {
         $gridBuilder
+            ->addOrderBy('name', 'asc')
             ->addField(
                 StringField::create('name')
                     ->setLabel('app.ui.name')

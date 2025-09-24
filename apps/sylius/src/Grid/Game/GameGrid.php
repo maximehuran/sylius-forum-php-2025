@@ -46,6 +46,7 @@ class GameGrid extends AbstractGrid implements ResourceAwareGridInterface
     {
         $gridBuilder
             ->setRepositoryMethod('createListQueryBuilder', ["expr:service('sylius.context.locale').getLocaleCode()"]) // To get with translations join
+            ->addOrderBy('name', 'asc')
             ->addField(
                 StringField::create('name')
                     ->setLabel('app.ui.name')
