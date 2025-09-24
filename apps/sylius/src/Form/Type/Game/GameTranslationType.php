@@ -23,7 +23,6 @@ class GameTranslationType extends AbstractResourceType
     public function __construct(
         #[Autowire('%app.model.game_translation.class%')]
         string $dataClass,
-        #[Autowire(['app'])]
         array $validationGroups = [],
     ) {
         parent::__construct($dataClass, $validationGroups);

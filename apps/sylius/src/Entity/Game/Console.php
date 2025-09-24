@@ -54,6 +54,7 @@ class Console implements ConsoleInterface
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $logo = null;
 
+    #[Assert\Count(min: 1)]
     #[ORM\ManyToOne(targetEntity: Constructor::class, inversedBy: 'consoles')]
     #[ORM\JoinColumn(name: 'constructor_id', referencedColumnName: 'id', nullable: true)]
     private ?ConstructorInterface $constructor = null;

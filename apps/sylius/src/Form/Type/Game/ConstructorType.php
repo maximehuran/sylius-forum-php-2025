@@ -24,7 +24,6 @@ class ConstructorType extends AbstractResourceType
     public function __construct(
         #[Autowire('%app.model.constructor.class%')]
         string $dataClass,
-        #[Autowire(['app'])]
         array $validationGroups = [],
     ) {
         parent::__construct($dataClass, $validationGroups);

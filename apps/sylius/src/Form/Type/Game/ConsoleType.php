@@ -27,7 +27,6 @@ class ConsoleType extends AbstractResourceType
     public function __construct(
         #[Autowire('%app.model.console.class%')]
         string $dataClass,
-        #[Autowire(['app'])]
         array $validationGroups = [],
     ) {
         parent::__construct($dataClass, $validationGroups);
