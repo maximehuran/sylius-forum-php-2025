@@ -15,6 +15,7 @@ namespace App\Form\Type\Game;
 
 use App\Entity\Game\Constructor;
 use Doctrine\ORM\EntityRepository;
+use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
@@ -42,7 +43,7 @@ class ConsoleType extends AbstractResourceType
                 'label' => 'app.ui.name',
                 'required' => true,
             ])
-            ->add('logo', TextType::class, [
+            ->add('logo', ImageType::class, [
                 'label' => 'app.ui.logo',
                 'required' => false,
             ])

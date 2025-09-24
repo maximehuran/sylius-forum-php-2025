@@ -13,6 +13,7 @@ declare(strict_types=1);
 
 namespace App\Form\Type\Game;
 
+use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Symfony\Component\DependencyInjection\Attribute\Autowire;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -39,7 +40,7 @@ class ConstructorType extends AbstractResourceType
                 'label' => 'app.ui.name',
                 'required' => true,
             ])
-            ->add('logo', TextType::class, [
+            ->add('logo', ImageType::class, [
                 'label' => 'app.ui.logo',
                 'required' => false,
             ])

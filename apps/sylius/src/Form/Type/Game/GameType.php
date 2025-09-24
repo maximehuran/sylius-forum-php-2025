@@ -15,6 +15,7 @@ namespace App\Form\Type\Game;
 
 use App\Entity\Game\Console;
 use Doctrine\ORM\EntityRepository;
+use MonsieurBiz\SyliusMediaManagerPlugin\Form\Type\ImageType;
 use Sylius\Bundle\ResourceBundle\Form\Type\AbstractResourceType;
 use Sylius\Bundle\ResourceBundle\Form\Type\ResourceTranslationsType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -43,7 +44,7 @@ class GameType extends AbstractResourceType
                 'label' => 'app.ui.name',
                 'required' => true,
             ])
-            ->add('cover', TextType::class, [
+            ->add('cover', ImageType::class, [
                 'label' => 'app.ui.cover',
                 'required' => false,
             ])
