@@ -2,13 +2,15 @@ sylius_fixtures:
     suites:
         default:
             fixtures:
+                app_game_file:
+                    name: monsieurbiz_rich_editor_file
+                    options:
+                        files:
+                            -   source_path: 'config/fixtures/game/placeholder.jpg'
+                                target_path: 'gallery/images/game/placeholder.jpg'
+
                 app_game:
                     options:
-                        random: 100
-                        custom:
-                           - consoles: 
-                                - 'NES'
-                                - 'Super NES'
-                             translations:
-                                 en_US: 
-                                     name: 'Super Mario Bros.'
+                        random: 200
+                        prototype:
+                            cover: 'gallery/images/game/placeholder.jpg'
