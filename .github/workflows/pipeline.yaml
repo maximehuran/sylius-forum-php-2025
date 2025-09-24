@@ -116,7 +116,7 @@ jobs:
 
             -   name: Upload deployment artifact
                 if: ${{ github.ref_name == vars.PRODUCTION_BRANCH }}
-                uses: actions/upload-artifact@v3
+                uses: actions/upload-artifact@v4
                 with:
                     name: application
                     path: ~/application.tgz

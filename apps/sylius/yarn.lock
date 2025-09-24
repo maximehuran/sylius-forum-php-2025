@@ -915,10 +915,10 @@
     "@babel/preset-env" "^7.25.8"
     "@hotwired/stimulus" "^3.0.0"
     "@popperjs/core" "^2.11.8"
-    "@sylius/admin-bundle" "file:../../../../Library/Caches/Yarn/v6/npm-@sylius-ui-admin-2.0.0-795948e0-3d70-48d9-a56a-f6897661257a-1756555431122/node_modules/@sylius-ui/admin/Resources/assets"
+    "@sylius/admin-bundle" "file:../../../../Library/Caches/Yarn/v6/npm-@sylius-ui-admin-2.0.0-7c4c0b37-0d40-4fe1-9d89-b49057fb5ae3-1758702240383/node_modules/@sylius-ui/admin/Resources/assets"
     "@symfony/stimulus-bridge" "^3.2.0"
     "@symfony/webpack-encore" "^5.0.1"
-    "@tabler/core" "^1.3.0"
+    "@tabler/core" "~1.3.0"
     apexcharts "^3.41.0"
     bootstrap "^5.3.3"
     infinite-tree "^1.17.1"
@@ -939,7 +939,7 @@
     "@babel/preset-env" "^7.25.8"
     "@hotwired/stimulus" "^3.0.0"
     "@popperjs/core" "^2.11.8"
-    "@sylius/shop-bundle" "file:../../../../Library/Caches/Yarn/v6/npm-@sylius-ui-shop-2.0.0-fd616b59-2f55-45a9-bb0c-04d6c615a030-1756555431435/node_modules/@sylius-ui/shop/Resources/assets"
+    "@sylius/shop-bundle" "file:../../../../Library/Caches/Yarn/v6/npm-@sylius-ui-shop-2.0.0-c4139573-7b8d-4010-8b09-19c0fb9aadf2-1758702240585/node_modules/@sylius-ui/shop/Resources/assets"
     "@symfony/stimulus-bridge" "^3.2.0"
     "@symfony/webpack-encore" "^5.0.1"
     bootstrap "^5.3.3"
@@ -993,13 +993,13 @@
     tmp "^0.2.1"
     yargs-parser "^21.0.0"
 
-"@tabler/core@^1.3.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@tabler/core/-/core-1.4.0.tgz#9e011289d92cf6120655793cef6576fd67eb07f3"
-  integrity sha512-5BigzOlbOH9N0Is4u0rYNRCiwtnUXWO57K9zwuscygcicAa8UV9MGaS4zTgQsZEtZ9tsNANhN/YD8gCBGKYCiw==
+"@tabler/core@~1.3.0":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@tabler/core/-/core-1.3.2.tgz#85e4a47b661bca4cd50e26039fc25c4bdb4aff34"
+  integrity sha512-QDVJbv48YJrahBLdxYkLi6NutQv4jGbkUWyzxE2NcNJ3s3GGpRx98JmbAoN92NZKNmf26vZdW6k2Q5haVKlS4A==
   dependencies:
     "@popperjs/core" "^2.11.8"
-    bootstrap "5.3.7"
+    bootstrap "5.3.6"
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -1365,10 +1365,10 @@ boolbase@^1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
 
-bootstrap@5.3.7:
-  version "5.3.7"
-  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.7.tgz#8640065036124d961d885d80b5945745e1154d90"
-  integrity sha512-7KgiD8UHjfcPBHEpDNg+zGz8L3LqR3GVwqZiBRFX04a1BCArZOz1r2kjly2HQ0WokqTO0v1nF+QAt8dsW4lKlw==
+bootstrap@5.3.6:
+  version "5.3.6"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-5.3.6.tgz#fbd91ebaff093f5b191a1c01a8c866d24f9fa6e1"
+  integrity sha512-jX0GAcRzvdwISuvArXn3m7KZscWWFAf1MKBcnzaN02qWMb3jpMoUX4/qgeiGzqyIb4ojulRzs89UCUmGcFSzTA==
 
 bootstrap@^5.3.3:
   version "5.3.3"

@@ -32,7 +32,7 @@ test.schema: ## Validate MySQL Schema
 	$(call symfony.console,doctrine:schema:validate)
 
 test.twig: ## Validate Twig templates
-	${CONSOLE} lint:twig -e prod --no-debug templates/
+	${CONSOLE} lint:twig --no-debug templates/
 
 test.duplicated-templates:
 	@resources/bin/check-templates.sh ${APP_DIR}/templates

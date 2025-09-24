@@ -7527,16 +7527,16 @@
         },
         {
             "name": "sylius/sylius",
-            "version": "v2.1.4",
+            "version": "v2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Sylius/Sylius.git",
-                "reference": "20789962bcf9afad492e2f08c56da6edf0a626b8"
+                "reference": "da59129e4c249cdc3d4b57840c86880008315592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/20789962bcf9afad492e2f08c56da6edf0a626b8",
-                "reference": "20789962bcf9afad492e2f08c56da6edf0a626b8",
+                "url": "https://api.github.com/repos/Sylius/Sylius/zipball/da59129e4c249cdc3d4b57840c86880008315592",
+                "reference": "da59129e4c249cdc3d4b57840c86880008315592",
                 "shasum": ""
             },
             "require": {
@@ -7811,7 +7811,7 @@
             "homepage": "https://sylius.com",
             "support": {
                 "issues": "https://github.com/Sylius/Sylius/issues",
-                "source": "https://github.com/Sylius/Sylius/tree/v2.1.4"
+                "source": "https://github.com/Sylius/Sylius/tree/v2.1.5"
             },
             "funding": [
                 {
@@ -7819,7 +7819,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-07-31T11:34:30+00:00"
+            "time": "2025-09-09T11:32:36+00:00"
         },
         {
             "name": "sylius/theme-bundle",
