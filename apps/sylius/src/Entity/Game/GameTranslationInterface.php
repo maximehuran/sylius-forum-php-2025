@@ -13,23 +13,12 @@ declare(strict_types=1);
 
 namespace App\Entity\Game;
 
-use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Resource\Model\ResourceInterface;
-use Sylius\Resource\Model\TimestampableInterface;
+use Sylius\Component\Resource\Model\TranslationInterface;
 
-interface ConstructorInterface extends ResourceInterface, TimestampableInterface
+interface GameTranslationInterface extends ResourceInterface, TranslationInterface
 {
     public function getName(): ?string;
 
     public function setName(?string $name): void;
-
-    public function getLogo(): ?string;
-
-    public function setLogo(?string $logo): void;
-
-    public function getConsoles(): Collection;
-
-    public function addConsole(Console $console): void;
-
-    public function removeConsole(Console $console): void;
 }

@@ -13,11 +13,10 @@ declare(strict_types=1);
 
 namespace App\Entity\Game;
 
-use Doctrine\Common\Collections\Collection;
 use Sylius\Component\Resource\Model\ResourceInterface;
 use Sylius\Resource\Model\TimestampableInterface;
 
-interface ConstructorInterface extends ResourceInterface, TimestampableInterface
+interface ConsoleInterface extends ResourceInterface, TimestampableInterface
 {
     public function getName(): ?string;
 
@@ -27,9 +26,7 @@ interface ConstructorInterface extends ResourceInterface, TimestampableInterface
 
     public function setLogo(?string $logo): void;
 
-    public function getConsoles(): Collection;
+    public function getConstructor(): ?ConstructorInterface;
 
-    public function addConsole(Console $console): void;
-
-    public function removeConsole(Console $console): void;
+    public function setConstructor(?ConstructorInterface $constructor): void;
 }
