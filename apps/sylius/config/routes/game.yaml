@@ -1,0 +1,24 @@
+app_game_index:
+    path: /{_locale}/games
+    methods: [ GET ]
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
+    defaults:
+        _controller: app.controller.game::indexAction
+        _sylius:
+            template: 'shop/game/index.html.twig'
+            grid: app_shop_game
+
+app_game_show:
+    path: /{_locale}/game/{id}
+    methods: [ GET ]
+    requirements:
+        _locale: ^[A-Za-z]{2,4}(_([A-Za-z]{4}|[0-9]{3}))?(_([A-Za-z]{2}|[0-9]{3}))?$
+    defaults:
+        _controller: app.controller.game::showAction
+        _sylius:
+            template: 'shop/game/show.html.twig'
+            repository:
+                method: find
+                arguments:
+                    - $id
