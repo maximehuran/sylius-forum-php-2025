@@ -2,10 +2,27 @@ sylius_fixtures:
     suites:
         default:
             fixtures:
+                app_constructor_file:
+                    name: monsieurbiz_rich_editor_file
+                    options:
+                        files:
+                            -   source_path: 'config/fixtures/constructor/microsoft.png'
+                                target_path: 'gallery/images/constructor/microsoft.png'
+                            -   source_path: 'config/fixtures/constructor/nintendo.png'
+                                target_path: 'gallery/images/constructor/nintendo.png'
+                            -   source_path: 'config/fixtures/constructor/sega.png'
+                                target_path: 'gallery/images/constructor/sega.png'
+                            -   source_path: 'config/fixtures/constructor/sony.png'
+                                target_path: 'gallery/images/constructor/sony.png'    
+
                 app_constructor:
                     options:
-                        random: 10
                         custom:
-                           - name: 'Nintendo'
-                           - name: 'Sony'
-                           - name: 'Microsoft'
+                           -    name: 'Microsoft'
+                                logo: 'gallery/images/constructor/microsoft.png'
+                           -    name: 'Nintendo'
+                                logo: 'gallery/images/constructor/nintendo.png'
+                           -    name: 'Sega'
+                                logo: 'gallery/images/constructor/sega.png'
+                           -    name: 'Sony'
+                                logo: 'gallery/images/constructor/sony.png'
