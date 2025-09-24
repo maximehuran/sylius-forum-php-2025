@@ -1,0 +1,15 @@
+sylius_twig_hooks:
+    # Separate file to explain the live component behaviour
+    hooks:
+        sylius_admin.constructor.create.content:
+            form: &sylius_admin_constructor_form
+                component: 'sylius_admin:constructor:form'
+                props:
+                    resource: '@=_context.resource'
+                    form: '@=_context.form'
+                    template: '@SyliusAdmin/shared/crud/common/content/form.html.twig'
+                configuration:
+                    render_rest: false
+                priority: 0
+        sylius_admin.constructor.update.content:
+            form: *sylius_admin_constructor_form

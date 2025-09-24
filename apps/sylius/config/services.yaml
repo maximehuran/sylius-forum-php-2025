@@ -28,3 +28,15 @@ services:
     App\Controller\:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
+
+    # Live component for constructor form
+    sylius_admin.twig.component.constructor.form:
+        autoconfigure: false
+        class: 'Sylius\Bundle\UiBundle\Twig\Component\ResourceFormComponent'
+        arguments:
+            - '@app.repository.constructor'
+            - '@form.factory'
+            - '%app.model.constructor.class%'
+            - 'App\Form\Type\Game\ConstructorType'
+        tags:
+            - { name: 'sylius.live_component.admin', key: 'sylius_admin:constructor:form' }
