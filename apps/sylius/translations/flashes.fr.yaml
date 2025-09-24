@@ -1,0 +1,13 @@
+app:
+    constructor:
+        create: 'Le constructeur a été créé avec succès.'
+        update: 'Le constructeur a été mis à jour avec succès.'
+        delete: 'Le constructeur a été supprimé avec succès.'
+    console:
+        create: 'La console a été créée avec succès.'
+        update: 'La console a été mise à jour avec succès.'
+        delete: 'La console a été supprimée avec succès.'
+    game:
+        create: 'Le jeu a été créé avec succès.'
+        update: 'Le jeu a été mis à jour avec succès.'
+        delete: 'Le jeu a été supprimé avec succès.'

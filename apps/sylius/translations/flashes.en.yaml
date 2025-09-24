@@ -1,0 +1,13 @@
+app:
+    constructor:
+        create: 'The constructor was successfully created.'
+        update: 'The constructor was successfully updated.'
+        delete: 'The constructor was successfully deleted.'
+    console:
+        create: 'The console was successfully created.'
+        update: 'The console was successfully updated.'
+        delete: 'The console was successfully deleted.'
+    game:
+        create: 'The game was successfully created.'
+        update: 'The game was successfully updated.'
+        delete: 'The game was successfully deleted.'
