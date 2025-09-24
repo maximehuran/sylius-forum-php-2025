@@ -1,0 +1,15 @@
+{% import '@SyliusShop/shared/messages.html.twig' as messages %}
+
+{% set games = get_hookable_context().resources ?? [] %}
+
+{% if games.data|length %}
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for game in games.data %}
+            <div class="col">
+                {% include 'shop/game/card.html.twig' with { class: 'h-100' } %}
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    {{ messages.info('sylius.ui.no_results_to_display') }}
+{% endif %}

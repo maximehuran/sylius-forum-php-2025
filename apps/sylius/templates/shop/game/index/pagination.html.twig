@@ -1,0 +1,8 @@
+{% import '@SyliusShop/shared/pagination/pagination.html.twig' as pagination %}
+
+{% set configuration = get_hookable_context().configuration ?? null %}
+{% set resources = get_hookable_context().resources ?? [] %}
+
+{% if configuration and configuration.isPaginated %}
+    {{ pagination.simple(resources.data) }}
+{% endif %}

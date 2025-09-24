@@ -1,0 +1,10 @@
+{% from '@SyliusShop/shared/breadcrumbs.html.twig' import breadcrumbs as breadcrumbs %}
+
+{% set crumbs = [
+    {'label': 'sylius.ui.home'|trans, 'path': path('sylius_shop_homepage')},
+    {'label': 'app.ui.games'|trans, 'active': true}
+] %}
+
+<div class="col-12">
+    {{ breadcrumbs(crumbs) }}
+</div>

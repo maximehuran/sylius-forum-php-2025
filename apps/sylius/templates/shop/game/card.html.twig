@@ -1,0 +1,29 @@
+{% if game.cover %}
+    {% set path = game.cover|imagine_filter('app_game_image') %}
+{% else %}
+    {% set path = '' %}
+{% endif %}
+
+<div class="card {{ class|default('') }}">
+    {% if path is not empty %}
+        <img src="{{ path }}" alt="{{ game.name }}" class="{{ class|default('')|escape('html_attr') }}">
+    {% endif %}
+    <div class="card-body">
+        <a href="{{ path('app_game_show', { 'id': game.id }) }}" class="stretched-link text-decoration-none">
+            <h5 class="card-title mb-1">{{ game.name }}</h5>
+        </a>
+    </div>
+
+    {% set consoles = game.consoles|default([]) %}
+    {% if consoles|length %}
+        <div class="card-footer bg-white px-4">
+            <div class="d-flex gap-1 flex-wrap">
+            {% for console in consoles %}
+                <span class="badge rounded-pill bg-primary text-light" style="font-size: 0.95em; text-decoration:none;">
+                    {{ console.name }}
+                </span>
+            {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</div>

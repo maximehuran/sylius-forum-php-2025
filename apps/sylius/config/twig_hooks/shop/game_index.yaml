@@ -1,0 +1,20 @@
+sylius_twig_hooks:
+    hooks:
+        # Game index
+        'app.game.index#metatags':
+            game_metatags:
+                template: 'shop/game/index/metatags.html.twig'
+                priority: 0
+        'app.game.index':
+            breadcrumbs:
+                template: 'shop/game/index/breadcrumbs.html.twig'
+                priority: 300
+            title:
+                template: 'shop/game/index/title.html.twig'
+                priority: 200
+            content:
+                template: 'shop/game/index/content.html.twig'
+                priority: 100
+            pagination:
+                template: 'shop/game/index/pagination.html.twig'
+                priority: 0
