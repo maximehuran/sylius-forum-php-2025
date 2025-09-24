@@ -4,6 +4,8 @@
     "require": {
         "php": "^8.3",
         "cweagans/composer-patches": "^1.7",
+        "monsieurbiz/sylius-media-manager-plugin": "^2.0.0",
+        "monsieurbiz/sylius-rich-editor-plugin": "^3.0.0",
         "sylius/sylius": "^2.1",
         "symfony/dotenv": "^6.4 || ^7.1",
         "symfony/flex": "^2.4",
@@ -63,7 +65,7 @@
         "symfony": {
             "allow-contrib": "true",
             "require": "^7.1",
-            "endpoint": ["https://api.github.com/repos/Sylius/SyliusRecipes/contents/index.json?ref=flex/main", "flex://defaults"]
+            "endpoint": ["https://api.github.com/repos/monsieurbiz/symfony-recipes/contents/index.json?ref=flex/master", "flex://defaults"]
         }
     },
     "autoload": {
@@ -93,6 +95,9 @@
             "@php bin/console sylius:show-plus-info --ansi"
         ],
         "auto-scripts": {
+
+            "vendor/monsieurbiz/sylius-rich-editor-plugin/scripts/replace_twig_extra_extensions.php": "php-script",
+
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },

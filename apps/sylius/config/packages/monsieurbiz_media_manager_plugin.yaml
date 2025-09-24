@@ -1,0 +1,12 @@
+imports:
+    - { resource: "@MonsieurBizSyliusMediaManagerPlugin/config/config.yaml" }
+
+liip_imagine:
+    loaders:
+        sylius_image:
+            filesystem:
+                data_root:
+                    - "%sylius_core.public_dir%/media" # Add media folder
+
+twig:
+    form_themes: ['@MonsieurBizSyliusMediaManagerPlugin/form/_theme.html.twig']

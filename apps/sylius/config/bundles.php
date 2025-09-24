@@ -60,4 +60,7 @@ return [
     Symfony\UX\StimulusBundle\StimulusBundle::class => ['all' => true],
     Sylius\TwigExtra\Symfony\SyliusTwigExtraBundle::class => ['all' => true],
     Symfony\UX\Icons\UXIconsBundle::class => ['all' => true],
+    MonsieurBiz\SyliusMediaManagerPlugin\MonsieurBizSyliusMediaManagerPlugin::class => ['all' => true],
+    Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
+    MonsieurBiz\SyliusRichEditorPlugin\MonsieurBizSyliusRichEditorPlugin::class => ['all' => true],
 ];
